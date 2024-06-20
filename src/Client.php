@@ -4,6 +4,7 @@ namespace Oveleon\YouTrack;
 
 use Oveleon\YouTrack\Api\Issue;
 use Oveleon\YouTrack\Api\Project;
+use Oveleon\YouTrack\Api\Commands;
 use Oveleon\YouTrack\Api\User;
 use Oveleon\YouTrack\Api\WorkItem;
 use Oveleon\YouTrack\HttpClient\HttpClientInterface;
@@ -28,6 +29,11 @@ class Client
     public function issues(): Issue
     {
         return new Issue($this);
+    }
+
+    public function commands(): Commands
+    {
+        return new Commands($this);
     }
 
     public function projects(): Project

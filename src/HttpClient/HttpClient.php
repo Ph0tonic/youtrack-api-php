@@ -11,7 +11,7 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface as SymfonyHttpClientInterface;
 
-class HttpClient implements HttpClientInterface
+final class HttpClient implements HttpClientInterface
 {
     private SymfonyHttpClientInterface $client;
     private string $endpoint;
