@@ -4,12 +4,19 @@ namespace Oveleon\YouTrack\Api;
 
 class Commands extends AbstractApi
 {
-
-    public function command($parameters)
+    protected function defaultFields(): self
     {
-        $this->addFields(
-            []
-        );
+        $this->addFields([
+            'id',
+            'idReadable',
+            'summary'
+        ]);
+
+        return $this;
+    }
+
+    public function command($parameters): array
+    {
         return $this->post("commands", $parameters);
     }
 }

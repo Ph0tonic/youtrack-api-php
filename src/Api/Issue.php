@@ -153,9 +153,4 @@ class Issue extends AbstractApi
     {
         return new TimeTracking($this->getClient());
     }
-
-    public function command($parameters)
-    {
-        return $this->post("commands", $parameters);
-    }
 }
